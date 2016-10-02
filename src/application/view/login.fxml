@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.view.loginController">
+   <children>
+      <TextField fx:id="userT" layoutX="142.0" layoutY="168.0" promptText="username" />
+      <TextField fx:id="ipT" layoutX="142.0" layoutY="237.0" promptText="Connect to IP Address" />
+      <Button defaultButton="true" layoutX="131.0" layoutY="307.0" mnemonicParsing="false" onAction="#handleConnect" text="Connect" />
+      <Button layoutX="235.0" layoutY="307.0" mnemonicParsing="false" onAction="#handleExit" prefHeight="25.0" prefWidth="60.0" text="Exit" />
+      <Label fx:id="status" alignment="CENTER" layoutX="113.0" layoutY="89.0" prefHeight="72.0" prefWidth="157.0" text="Plain Chat 1.0" />
+      <Label layoutX="68.0" layoutY="168.0" prefHeight="25.0" prefWidth="70.0" text="Nick Name" />
+      <Label layoutX="68.0" layoutY="237.0" prefHeight="25.0" prefWidth="70.0" text="IP Address" />
+      <RadioButton fx:id="rbH" layoutX="24.0" layoutY="25.0" mnemonicParsing="false" onAction="#handleRadioButton" text="Host">
+         <toggleGroup>
+            <ToggleGroup fx:id="server" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="rbG" layoutX="24.0" layoutY="63.0" mnemonicParsing="false" onAction="#handleRadioButton" text="Guest" toggleGroup="$server" />
+   </children>
+</AnchorPane>
