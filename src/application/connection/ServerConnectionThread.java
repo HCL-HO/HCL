@@ -9,7 +9,6 @@ import java.util.List;
 import java.util.function.Consumer;
 
 public class ServerConnectionThread extends Thread{
-	public static List<String> NameList = new ArrayList<String>();
 	public static ArrayList<ServerThread> serversThreads = new ArrayList<>();
 	private Consumer<Serializable> consume;
 	public static String UserName;
